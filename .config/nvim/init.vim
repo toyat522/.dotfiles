@@ -3,9 +3,9 @@ syntax on
 filetype plugin indent on
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+	silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
 "some servers have issues with backup files
@@ -53,17 +53,17 @@ let @/ = ""
 
 call plug#begin('~/.config/nvim/plugged')
 
-	Plug 'cocopon/iceberg.vim'
-	Plug 'gkeep/iceberg-dark'
-	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-	Plug 'gosukiwi/vim-atom-dark'
-	Plug 'scrooloose/nerdtree'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'lervag/vimtex'
-	Plug 'Maxattax97/coc-ccls'
-	Plug 'tpope/vim-fugitive'
-	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-	Plug 'itchyny/lightline.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'gkeep/iceberg-dark'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'lervag/vimtex'
+Plug 'Maxattax97/coc-ccls'
+Plug 'tpope/vim-fugitive'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -73,20 +73,20 @@ call plug#end()
 
 " use <Tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
 " Use tab for trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+			\ coc#pum#visible() ? coc#pum#next(1) :
+			\ CheckBackspace() ? "\<Tab>" :
+			\ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
 	let col = col('.') - 1
@@ -95,9 +95,9 @@ endfunction
 
 " Use <c-space> to trigger completion
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+	inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+	inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " disable startup warning
