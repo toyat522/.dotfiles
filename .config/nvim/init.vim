@@ -126,7 +126,4 @@ colorscheme iceberg
 let g:lightline = {'colorscheme': 'icebergDark'}
 
 " vimtex settings
-let g:vimtex_view_general_viewer = 'mupdf'
-
-" auto-pairs
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''", '<':'>'}
+let g:vimtex_view_general_viewer = 'zathura'
