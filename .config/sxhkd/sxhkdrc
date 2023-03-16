@@ -1,7 +1,7 @@
-alt + shift + s
+super + shift + s
 	maim -s /home/toyat/Downloads/$(date +%Y-%m-%d-%H_%M-%S).jpg
 
-alt + shift + f
+super + shift + f
 	maim /home/toyat/Downloads/$(date +%Y-%m-%d-%H_%M-%S).jpg
 
 XF86AudioRaiseVolume
@@ -14,7 +14,7 @@ XF86AudioMute
 	amixer set Master toggle
 
 XF86MonBrightnessUp
-	backlight_control +5
+	light -A 5
 
 XF86MonBrightnessDown
-	backlight_control -5
+	light -U 5
