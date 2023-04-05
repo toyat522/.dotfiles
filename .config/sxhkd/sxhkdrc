@@ -11,7 +11,7 @@ XF86AudioLowerVolume
 	amixer set Master 4%-
 
 XF86AudioMute
-	amixer set Master toggle
+	amixer set Master toggle && amixer set Speaker on && amixer set Headphone on
 
 XF86MonBrightnessUp
 	light -A 5
