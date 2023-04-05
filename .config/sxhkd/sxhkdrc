@@ -1,8 +1,8 @@
 super + shift + s
-	maim -s /home/toyat/Downloads/$(date +%Y-%m-%d-%H_%M-%S).jpg
+	maim -s /home/toyat/Pictures/$(date +%Y-%m-%d-%H_%M-%S).jpg
 
 super + shift + f
-	maim /home/toyat/Downloads/$(date +%Y-%m-%d-%H_%M-%S).jpg
+	maim /home/toyat/Pictures/$(date +%Y-%m-%d-%H_%M-%S).jpg
 
 XF86AudioRaiseVolume
 	amixer set Master 4%+
