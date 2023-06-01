@@ -5,20 +5,16 @@ plugins=(
 	git
 	vi-mode
 	zsh-autosuggestions
-	web-search
-	copypath
-	copyfile
-	copybuffer
 	history
 )
 
 export ZSH="$HOME/.oh-my-zsh"
-export _colcon_cd_root=/opt/ros/foxy/
+#export _colcon_cd_root=/opt/ros/foxy/
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/colcon_cd/function/colcon_cd.sh
+#source /usr/share/colcon_cd/function/colcon_cd.sh
 
 alias vim="nvim"
 
 #-------- Custom functions --------#
-chros() { source /opt/ros/$1/setup.zsh } # Usage: chros <distro>
+#chros() { source /opt/ros/$1/setup.zsh } # Usage: chros <distro>
