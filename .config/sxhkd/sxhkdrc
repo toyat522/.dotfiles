@@ -1,8 +1,8 @@
 super + shift + s
-	scrot -s /home/toyat/Pictures/$(date +%Y-%m-%d-%H_%M-%S).jpg
+	scrot -s /home/$USER/Pictures/$(date +%Y-%m-%d-%H_%M-%S).jpg
 
 super + shift + f
-	scrot /home/toyat/Pictures/$(date +%Y-%m-%d-%H_%M-%S).jpg
+	scrot /home/$USER/Pictures/$(date +%Y-%m-%d-%H_%M-%S).jpg
 
 XF86AudioRaiseVolume
 	amixer set Master 4%+
