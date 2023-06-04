@@ -1,4 +1,4 @@
-ZSH_THEME="eastwood"
+ZSH_THEME="agnoster"
 export TERM=xterm-256color
 
 plugins=(

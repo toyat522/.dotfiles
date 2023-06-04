@@ -8,7 +8,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
-"some servers have issues with backup files
+" Some servers have issues with backup files
 set nobackup
 set nowritebackup
 
@@ -31,20 +31,20 @@ set wildmode=list:longest
 set mouse=a
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-"always show signcolumn
+" Always show signcolumn
 set signcolumn=yes
 
-"numerical settings
+" Numerical settings
 set shiftwidth=4
 set tabstop=4
 set history=100
 set updatetime=300
 set cmdheight=2
 
-"use clipboard for cut and paste
+" Use clipboard for cut and paste
 set clipboard+=unnamedplus
 
-"clear last used search pattern
+" Clear last used search pattern
 let @/ = ""
 
 
@@ -53,11 +53,14 @@ let @/ = ""
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'cocopon/iceberg.vim'
-Plug 'gkeep/iceberg-dark'
+"Plug 'cocopon/iceberg.vim'
+"Plug 'gkeep/iceberg-dark'
+"Plug 'scrooloose/nerdtree'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'gosukiwi/vim-atom-dark'
-Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'Maxattax97/coc-ccls'
@@ -108,22 +111,27 @@ let g:coc_disable_startup_warning = 1
 "-------- NERDTree stuff here --------"
 
 " <C-n> for toggling nerdtree 
-nmap <C-n> :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+"nmap <C-n> :NERDTreeToggle<CR>
+"let NERDTreeQuitOnOpen = 1
+"let NERDTreeAutoDeleteBuffer = 1
+"let NERDTreeMinimalUI = 1
+"let NERDTreeDirArrows = 1
+
+"-------- NvimTree stuff here --------"
+
 
 "-------- Colorscheme --------"
 set termguicolors
-colorscheme iceberg
+"colorscheme iceberg
+colorscheme nightfox
 
 
 
 "-------- Miscellaneous plugins --------"
 
 " lightline color configuration
-let g:lightline = {'colorscheme': 'icebergDark'}
+"let g:lightline = {'colorscheme': 'icebergDark'}
+let g:lightline = {'colorscheme': 'nightfox'}
 
 " vimtex settings
 let g:vimtex_view_general_viewer = 'zathura'

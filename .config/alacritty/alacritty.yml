@@ -1,9 +1,10 @@
 # Font configuration
 font:
   normal:
-    family: Terminus
-  size: 9.0
+    #family: Terminus
+    family: Fira Code
+  size: 7.5
 
 # Theme configuration
 import:
-  - "~/.config/alacritty/alacritty-theme/themes/tokyo-night.yaml"
+  - "~/.config/alacritty/themes/themes/tokyo-night.yaml"
