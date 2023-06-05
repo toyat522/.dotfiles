@@ -13,6 +13,9 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/$USER/.config/scripts/lock --nofork
 
+# make caps lock escape
+exec --no-startup-id setxkbmap -option caps:escape
+
 # low battery warning
 exec (crontab -l 2>/dev/null; echo "*/1 * * * * /home/$USER/.config/scripts/i3batwarn.sh") | crontab -
 
@@ -109,11 +112,11 @@ set $ws2 "2:  Firefox"
 set $ws3 "3:  Term1"
 set $ws4 "4:  Term2"
 set $ws5 "5:  Term3"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws6 "6:  Term4"
+set $ws7 "7:  Misc1"
+set $ws8 "8:  Misc2"
+set $ws9 "9:  Misc3"
+set $ws10 "10:  Music"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -171,6 +174,14 @@ bindsym $mod+r mode "resize"
 
 bar {
         status_command i3status -c /home/$USER/.config/i3status/i3status.conf
+		colors {
+                separator #191919
+                #                       border          background      text
+                focused_workspace       $bgcolor        $bgcolor        $text
+                inactive_workspace      $in-bgcolor     $in-bgcolor     $text
+                urgent_workspace        $u-bgcolor      $u-bgcolor      $text   
+
+        }
 }
 
 # color schemes for windows
