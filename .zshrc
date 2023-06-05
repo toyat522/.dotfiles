@@ -1,6 +1,5 @@
 ZSH_THEME="agnoster"
 export TERM=xterm-256color
-export EDITOR=nvim
 
 plugins=(
 	git

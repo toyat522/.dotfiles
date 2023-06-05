@@ -26,11 +26,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-. "$HOME/.cargo/env"
-
-export PATH=/home/toyat/.emacs.d/bin:$PATH
-export PATH=/home/toyat/moos-ivp/bin:$PATH
-export PATH=/home/toyat/moos-ivp/scripts:$PATH
-export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-arcturus/bin:$PATH
+#export PATH=/home/toyat/.emacs.d/bin:$PATH
+#export PATH=/home/toyat/moos-ivp/bin:$PATH
+#export PATH=/home/toyat/moos-ivp/scripts:$PATH
+#export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-arcturus/bin:$PATH
 
 export EDITOR='nvim'

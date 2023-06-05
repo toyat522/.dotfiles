@@ -55,9 +55,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'cocopon/iceberg.vim'
 "Plug 'gkeep/iceberg-dark'
-"Plug 'scrooloose/nerdtree'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'nvim-tree/nvim-tree.lua'
+Plug 'scrooloose/nerdtree'
+"Plug 'nvim-tree/nvim-web-devicons'
+"Plug 'nvim-tree/nvim-tree.lua'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'gosukiwi/vim-atom-dark'
@@ -111,13 +111,12 @@ let g:coc_disable_startup_warning = 1
 "-------- NERDTree stuff here --------"
 
 " <C-n> for toggling nerdtree 
-"nmap <C-n> :NERDTreeToggle<CR>
-"let NERDTreeQuitOnOpen = 1
-"let NERDTreeAutoDeleteBuffer = 1
-"let NERDTreeMinimalUI = 1
-"let NERDTreeDirArrows = 1
+nmap <C-n> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
-"-------- NvimTree stuff here --------"
 
 
 "-------- Colorscheme --------"
