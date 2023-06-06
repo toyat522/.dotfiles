@@ -30,8 +30,8 @@ exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
-# low battery warning
-exec (crontab -l 2>/dev/null; echo "*/1 * * * * /home/$USER/.config/scripts/i3batwarn.sh") | crontab -
+# low battery warning:
+# run "crontab -e" and enter "*/1 * * * * /home/$USER/.config/scripts/i3batwarn.sh"
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
