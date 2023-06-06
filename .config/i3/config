@@ -19,6 +19,9 @@ exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/$USER/.config/scripts/lock --nofork
 
+# start up dropbox
+exec --no-startup-id exec ~/.dropbox-dist/dropboxd
+
 # swap caps lock and escape
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
