@@ -17,4 +17,4 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 
 #-------- Custom functions --------#
-#chros() { source /opt/ros/$1/setup.zsh } # Usage: chros <distro>
+chros() { source /opt/ros/$1/setup.zsh } # Usage: chros <distro>
