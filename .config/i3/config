@@ -121,8 +121,8 @@ bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  Mail"
-set $ws2 "2:  Firefox"
+set $ws1 "1:  Mail"
+set $ws2 "2:  Firefox"
 set $ws3 "3:  Term1"
 set $ws4 "4:  Term2"
 set $ws5 "5:  Term3"
