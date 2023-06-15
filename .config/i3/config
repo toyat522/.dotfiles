@@ -13,7 +13,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec feh --bg-fill --randomize ~/bg/*
 
 # picom
-exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --inactive-opacity=0.9
+exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --inactive-opacity=0.9 --opacity-rule 100:name *= "rofi"
 
 # autotiling (need to install package)
 exec_always --no-startup-id autotiling
