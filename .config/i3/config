@@ -121,16 +121,16 @@ bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  Mail"
-set $ws2 "2:  Firefox"
-set $ws3 "3:  Term1"
-set $ws4 "4:  Term2"
-set $ws5 "5:  Term3"
-set $ws6 "6:  Misc1"
-set $ws7 "7:  Misc2"
-set $ws8 "8:  CAD"
-set $ws9 "9:  SMS"
-set $ws10 "10:  Music"
+set $ws1 "1: <span font_family='Font Awesome 6 Free'></span> Mail"
+set $ws2 "2: <span font_family='Font Awesome 6 Free'></span> Firefox"
+set $ws3 "3: <span font_family='Font Awesome 6 Free'></span> Term1"
+set $ws4 "4: <span font_family='Font Awesome 6 Free'></span> Term2"
+set $ws5 "5: <span font_family='Font Awesome 6 Free'></span> Term3"
+set $ws6 "6: <span font_family='Font Awesome 6 Free'></span> Misc1"
+set $ws7 "7: <span font_family='Font Awesome 6 Free'></span> Misc2"
+set $ws8 "8: <span font_family='Font Awesome 6 Free'></span> CAD"
+set $ws9 "9: <span font_family='Font Awesome 6 Free'></span> SMS"
+set $ws10 "10: <span font_family='Font Awesome 6 Free'></span> Music"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
