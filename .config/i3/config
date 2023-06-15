@@ -13,7 +13,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec feh --bg-fill --randomize ~/Pictures/bg/*
 
 # picom
-exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0
+exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --inactive-opacity=0.9
 
 # autotiling (need to install package)
 exec_always --no-startup-id autotiling
@@ -45,8 +45,8 @@ bindsym XF86AudioMute 		 exec --no-startup-id pactl set-sink-mute   @DEFAULT_SIN
 bindsym XF86AudioMicMute 	 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # use light to change screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
-bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
 
 # screenshots
 bindsym --release Print exec --no-startup-id scrot -s "/home/$USER/Pictures/$(date).jpg"
