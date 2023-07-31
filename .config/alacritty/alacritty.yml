@@ -3,7 +3,7 @@ font:
   normal:
     #family: Terminus
     family: Fira Code
-  size: 7
+  size: 8
 
 # Theme configuration
 import:

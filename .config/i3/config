@@ -18,13 +18,6 @@ exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --inactive-o
 # autotiling (need to install package)
 exec_always --no-startup-id autotiling
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/$USER/.config/scripts/lock --nofork
-
-# start up dropbox
-exec --no-startup-id exec ~/.dropbox-dist/dropboxd
-
 # swap caps lock and escape
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
@@ -32,6 +25,13 @@ exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 # low battery warning:
 # run "crontab -e" and enter "*/1 * * * * /home/$USER/.config/scripts/i3batwarn.sh"
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/$USER/.config/scripts/lock --nofork
+
+# start up dropbox
+exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 
 # applets
 exec --no-startup-id nm-applet
