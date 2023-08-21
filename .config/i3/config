@@ -12,17 +12,6 @@ exec --no-startup-id dex --autostart --environment i3
 # choose random background
 exec feh --bg-fill --randomize ~/bg/*
 
-# picom
-exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --inactive-opacity=0.9
-
-# autotiling (need to install package)
-exec_always --no-startup-id autotiling
-
-# swap caps lock and escape
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-
 # low battery warning:
 # run "crontab -e" and enter "*/1 * * * * /home/$USER/.config/scripts/i3batwarn.sh"
 
@@ -36,6 +25,15 @@ exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 # applets
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
+
+# picom
+exec_always --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --inactive-opacity=0.9
+
+# autotiling (need to install package)
+exec_always --no-startup-id autotiling
+
+# change caps lock to escape
+exec_always --no-startup-id setxkbmap -option caps:escape
 
 # use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
