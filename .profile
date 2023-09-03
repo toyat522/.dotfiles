@@ -26,10 +26,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export PATH=/home/toyat/.emacs.d/bin:$PATH
 export PATH=/home/toyat/moos-ivp/bin:$PATH
 export PATH=/home/toyat/moos-ivp/scripts:$PATH
-export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-arcturus/bin:$PATH
+export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-toyat/bin:$PATH
+export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-toyat/scripts:$PATH
+export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-gateway/bin:$PATH
+export PATH=/home/toyat/Documents/MIT/Arcturus/moos-ivp-gateway/scripts:$PATH
 export PATH=/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:$PATH
 export PATH=/home/toyat/ardupilot/Tools/autotest:$PATH
 export PATH=/usr/lib/ccache:$PATH
