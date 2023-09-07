@@ -10,14 +10,13 @@ plugins=(
 
 export ZSH="$HOME/.oh-my-zsh"
 export _colcon_cd_root=/opt/ros/humble/
-export IVP_IMAGE_DIRS=~/Documents/MIT/Arcturus/moos-ivp-toyat/images/
+export IVP_IMAGE_DIRS=~/Documents/MIT/Arcturus/moos-ivp-arcturus/images/
 
+autoload -U +X compinit && compinit
 source $ZSH/oh-my-zsh.sh
 source /usr/share/colcon_cd/function/colcon_cd.sh
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
 source /opt/ros/humble/setup.zsh
-eval "$(register-python-argcomplete3 ros2)"
-eval "$(register-python-argcomplete3 colcon)"
 
 alias vim="nvim"
 
