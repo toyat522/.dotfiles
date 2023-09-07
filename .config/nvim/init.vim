@@ -18,7 +18,7 @@ set hlsearch
 set cursorline
 set showmatch
 set nostartofline
-set showmode
+set noshowmode
 set wildmenu
 set smarttab
 set smartindent
