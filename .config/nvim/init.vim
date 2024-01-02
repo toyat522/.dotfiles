@@ -1,43 +1,60 @@
+" Enable syntax highlighting
 filetype on
 syntax on
 filetype plugin indent on
 
-" Some servers have issues with backup files
+" Set encoding
+set encoding=UTF-8
+
+" Improve performance
+set ttyfast
+set lazyredraw
+
+" Remove backup and swap files
 set nobackup
 set nowritebackup
+set noswapfile
 
-set nocompatible
-set ttyfast
-set expandtab
-set lazyredraw
-set confirm
-set ruler
+" Indent and tab settings
 set autoindent
-set number
+set expandtab
+set smartindent
+set smarttab
+
+" Enable highlight search 
 set hlsearch
+
+" Confirm when closing unsaved files
+set confirm
+
+" Show number
+set number
+
+" Show cursorline
 set cursorline
-set showmatch
-set nostartofline
+
+" Show matching parenthesis
+set showmatch 
+
+" Show symbols on error message
+set signcolumn=yes
+
+" Use mouse
+set mouse=a
+
+" Configure wildmenu and statusline
 set noshowmode
 set wildmenu
-set smarttab
-set smartindent
-set wildmode=list:longest
-set mouse=a
+set wildmode=longest:list,full
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
-" Always show signcolumn
-set signcolumn=yes
 
 " Numerical settings
 set shiftwidth=4
+set softtabstop=4
 set tabstop=4
 set history=100
 set updatetime=300
 set cmdheight=2
-
-" Use clipboard for cut and paste
-set clipboard+=unnamedplus
 
 " Clear last used search pattern
 let @/ = ""
@@ -48,84 +65,84 @@ let @/ = ""
 
 call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'cocopon/iceberg.vim'
-"Plug 'gkeep/iceberg-dark'
-Plug 'scrooloose/nerdtree'
-"Plug 'nvim-tree/nvim-web-devicons'
-"Plug 'nvim-tree/nvim-tree.lua'
-Plug 'EdenEast/nightfox.nvim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'jiangmiao/auto-pairs'
-Plug 'lervag/vimtex'
-Plug 'Maxattax97/coc-ccls'
-Plug 'tpope/vim-fugitive'
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+" NERDTree
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
+" Tab bar settings
+Plug 'romgrk/barbar.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'lewis6991/gitsigns.nvim'
+
+" Themes
 Plug 'itchyny/lightline.vim'
+Plug 'sainnhe/sonokai'
+Plug 'ayu-theme/ayu-vim'
+
+" Utility
+Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'Maxattax97/coc-ccls'
+Plug 'lervag/vimtex'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
 call plug#end()
 
 
 
-"-------- coc.nvim stuff here --------"
-
-" use <Tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+"-------- coc.nvim settings --------"
 
 " Use tab for trigger completion with characters ahead and navigate
-inoremap <silent><expr> <TAB>
+function! CheckBackspace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+inoremap <silent><expr><TAB>
 			\ coc#pum#visible() ? coc#pum#next(1) :
 			\ CheckBackspace() ? "\<Tab>" :
 			\ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+inoremap <silent><expr><CR> coc#pum#visible() ? coc#pum#confirm()
 			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-function! CheckBackspace() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion
-if has('nvim')
-	inoremap <silent><expr> <c-space> coc#refresh()
-else
-	inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" disable startup warning
+" Disable startup warning
 let g:coc_disable_startup_warning = 1
 
 
 
-"-------- NERDTree stuff here --------"
+"-------- NERDTree settings --------"
 
-" <C-n> for toggling nerdtree 
-nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+
+" <C-n> for toggling nerdtree 
+nmap <C-n> :NERDTreeToggle<CR>
+
+" Remove DIR arrows
+let NERDTreeDirArrowExpandable = "\u00a0"
+let NERDTreeDirArrowCollapsible = "\u00a0"
 
 
 
-"-------- Colorscheme --------"
+"-------- barbar settings --------#
+
+" Move to previous/next
+nnoremap <silent><A-,> <Cmd>BufferPrevious<CR>
+nnoremap <silent><A-.> <Cmd>BufferNext<CR>
+
+" Close buffer
+nnoremap <silent><A-c> <Cmd>BufferClose<CR>
+
+
+
+"-------- Themes --------"
 set termguicolors
-"colorscheme iceberg
-colorscheme nightfox
+let ayucolor="mirage"
+colorscheme ayu
+let g:lightline = { 'colorscheme': 'one' }
 
-
-
-"-------- Miscellaneous plugins --------"
-
-" lightline color configuration
-"let g:lightline = {'colorscheme': 'icebergDark'}
-let g:lightline = {'colorscheme': 'nightfox'}
-
-" vimtex settings
+"-------- Vimtex settings --------"
 let g:vimtex_view_general_viewer = 'zathura'
