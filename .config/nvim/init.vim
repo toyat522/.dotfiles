@@ -82,7 +82,6 @@ Plug 'ayu-theme/ayu-vim'
 " Utility
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'Maxattax97/coc-ccls'
 Plug 'lervag/vimtex'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
