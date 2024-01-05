@@ -39,6 +39,9 @@ set showmatch
 " Show symbols on error message
 set signcolumn=yes
 
+" Copy/paste from system clipboard
+set clipboard=unnamedplus
+
 " Use mouse
 set mouse=a
 
