@@ -9,6 +9,7 @@ plugins=(
 )
 
 export ZSH="$HOME/.oh-my-zsh"
+export NODE_OPTIONS="--dns-result-order=ipv4first"
 export _colcon_cd_root=/opt/ros/humble/
 export IVP_IMAGE_DIRS=~/arcturus/moos-ivp-arcturus/images/
 

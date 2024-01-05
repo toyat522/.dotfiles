@@ -32,6 +32,7 @@ export PATH=/home/toyat/arcturus/moos-ivp-arcturus/bin:$PATH
 export PATH=/home/toyat/arcturus/moos-ivp-arcturus/scripts:$PATH
 export PATH=/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:$PATH
 export PATH=/usr/lib/ccache:$PATH
+export PATH=/home/toyat/.npm-global/bin:$PATH
 
 export EDITOR='nvim'
 
