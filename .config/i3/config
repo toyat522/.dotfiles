@@ -14,6 +14,9 @@ exec feh --bg-fill --randomize ~/bg/*
 # xss-lock will use i3lock to lock the screen before suspend
 exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/$USER/.config/scripts/lock --nofork
 
+# Set up policykit
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
 # Start up dropbox
 exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 

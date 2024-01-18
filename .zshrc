@@ -11,7 +11,6 @@ plugins=(
 export ZSH="$HOME/.oh-my-zsh"
 export NODE_OPTIONS="--dns-result-order=ipv4first"
 export _colcon_cd_root=/opt/ros/humble/
-export IVP_IMAGE_DIRS=~/arcturus/moos-ivp-arcturus/images/
 export PATH=~/moos-ivp/bin:$PATH
 export PATH=~/moos-ivp/scripts:$PATH
 
@@ -31,6 +30,7 @@ sa() {
     source ~/vrx_ws/install/setup.zsh
     export PATH=~/arcturus/moos-ivp-arcturus/bin:$PATH
     export PATH=~/arcturus/moos-ivp-arcturus/scripts:$PATH
+    export IVP_IMAGE_DIRS=~/arcturus/moos-ivp-arcturus/images/
 }
 
 # Source robotx workspace function
@@ -39,4 +39,5 @@ sr() {
     source ~/vrx_ws/install/setup.zsh
     export PATH=~/robotx/moos-ivp-robotx/bin:$PATH
     export PATH=~/robotx/moos-ivp-robotx/scripts:$PATH
+    export IVP_IMAGE_DIRS=~/robotx/moos-ivp-robotx/images/
 }
